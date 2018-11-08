@@ -1,9 +1,9 @@
 class Api::UsersController < ApplicationController
   def index
-    @user = User.all
-    render 'index.json.jbuilder'
+    @users = User.all
+    render "index.json.jbuilder"
   end
-  
+
   # def create
   #   user = User.new(
   #     name: params[:name],
