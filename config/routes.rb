@@ -15,5 +15,11 @@ Rails.application.routes.draw do
     post '/goals' => 'goals#create'
     patch '/goals/:id' => 'goals#update'
     delete '/goals/:id' => 'goals#destroy'
+  # sub_goals
+    get '/sub_goals' => 'sub_goals#index' 
+    get '/sub_goals/:id' => 'sub_goals#show'
+    post '/sub_goals' => 'sub_goals#create'
+    patch '/sub_goals/:id' => 'sub_goals#update'
+    delete '/sub_goals/:id' => 'sub_goals#destroy'
   end
 end
