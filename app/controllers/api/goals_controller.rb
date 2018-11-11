@@ -3,5 +3,22 @@ class Api::GoalsController < ApplicationController
     @goals = Goal.all
     render "index.json.jbuilder"
   end
+  def show
+    @goal = Goal.find_by(id: params[:id])
+    render "show.json.jbuilder"
+  end
+  def create
+    goal = Goal.new(
+      goal_name: params[:goal_name],
+      due_date: params[:due_date],
+      status: params[:status],
+    )
+    if goal.save
+      render json: {message: 'goal created successfully'}, status: :created
+    else
+      render json: {errors: goal.errors.full_messages}, status: :bad_request
+    end
+  end
 end
+
 
