@@ -19,6 +19,20 @@ class Api::GoalsController < ApplicationController
       render json: {errors: goal.errors.full_messages}, status: :bad_request
     end
   end
+  def update
+    @goal = Goal.find_by(id: params[:id])
+    @goal.update(
+      goal_name: params[:goal_name],
+      due_date: params[:due_date],
+      status: params[:status],
+    )
+    render "show.json.jbuilder"
+  end
+  def destroy
+    @goal = Goal.find_by(id: params[:id])
+    @goal.destroy
+    render json: {message: "You deleted this goal"}
+  end
 end
 
 
