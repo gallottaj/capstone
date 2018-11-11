@@ -11,6 +11,9 @@
   user.save! 
 end
 
+goal1 = Goal.new(goal_name: "Promotion", due_date: "5/1/19", status: "in-progress")
+goal1.save!
+
 
 
 
