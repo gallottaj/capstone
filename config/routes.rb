@@ -10,7 +10,8 @@ Rails.application.routes.draw do
     patch '/users/:id' => 'users#update'
     delete '/users/:id' => 'users#destroy'
   # sessions
-    post "/sessions" => "sessions#create"
+    get '/sessions' => 'sessions#show' 
+    post "/sessions" => 'sessions#create'
   # goals
     get '/goals' => 'goals#index' 
     get '/goals/:id' => 'goals#show'
