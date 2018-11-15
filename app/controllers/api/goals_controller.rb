@@ -12,6 +12,7 @@ class Api::GoalsController < ApplicationController
       goal_name: params[:goal_name],
       due_date: params[:due_date],
       status: params[:status],
+      user_id: params[:user_id]
     )
     if goal.save
       render json: {message: 'goal created successfully'}, status: :created
