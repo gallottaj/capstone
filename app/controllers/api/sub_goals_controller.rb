@@ -11,7 +11,8 @@ class Api::SubGoalsController < ApplicationController
     sub_goal = SubGoal.new(
       sg_name: params[:sg_name],
       sg_due_date: params[:sg_due_date],
-      sg_status: params[:sg_status]
+      sg_status: params[:sg_status],
+      goal_id: params[:goal_id]
     )
     if sub_goal.save
       render json: {message: 'sub_goal created successfully'}, status: :created
