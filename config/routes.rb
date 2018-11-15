@@ -23,5 +23,11 @@ Rails.application.routes.draw do
     post '/sub_goals' => 'sub_goals#create'
     patch '/sub_goals/:id' => 'sub_goals#update'
     delete '/sub_goals/:id' => 'sub_goals#destroy'
+  # journals
+    get '/journals' => 'journals#index' 
+    get '/journals/:id' => 'journals#show'
+    post '/journals' => 'journals#create'
+    patch '/journals/:id' => 'journals#update'
+    delete '/journals/:id' => 'journals#destroy'
   end
 end
