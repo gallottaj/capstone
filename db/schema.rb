@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_15_010340) do
+ActiveRecord::Schema.define(version: 2018_11_18_204346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,16 +26,16 @@ ActiveRecord::Schema.define(version: 2018_11_15_010340) do
 
   create_table "journals", force: :cascade do |t|
     t.string "entry_type"
-    t.string "text"
-    t.string "sub_goal_id"
+    t.string "entry_body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "entry_title"
   end
 
   create_table "sub_goals", force: :cascade do |t|
-    t.string "sg_name"
-    t.string "sg_due_date"
-    t.string "sg_status"
+    t.string "sub_goal_name"
+    t.string "sub_goal_due_date"
+    t.string "sub_goal_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "goal_id"

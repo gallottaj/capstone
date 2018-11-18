@@ -32,3 +32,4 @@ Rails.application.routes.draw do
     delete '/journals/:id' => 'journals#destroy'
   end
 end
+
