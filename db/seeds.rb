@@ -17,9 +17,8 @@
 # sub_goal1 = SubGoal.new(sg_name: "perfect attendance", sg_due_date: "12/31/18", sg_status: "started")
 # sub_goal1.save!
 
-sub_goal2 = SubGoal.new(sg_name: "perfect attendance", sg_due_date: "12/31/18", sg_status: "started", goal_id: "2")
-sub_goal2.save!
-
+Todo.create(task_name: "laundry", task_description: "fold towels", task_checkbox_status: "unchecked")
+Todo.create(task_name: "schedule appt", task_description: "call the number", task_checkbox_status: "checked")
 
 
 

@@ -30,6 +30,13 @@ Rails.application.routes.draw do
     post '/journals' => 'journals#create'
     patch '/journals/:id' => 'journals#update'
     delete '/journals/:id' => 'journals#destroy'
+ # todos
+    get '/todos' => 'todos#index' 
+    get '/todos/:id' => 'todos#show'
+    post '/todos' => 'todos#create'
+    patch '/todos/:id' => 'todos#update'
+    delete '/todos/:id' => 'todos#destroy'
   end
 end
+
 
