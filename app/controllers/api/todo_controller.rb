@@ -3,10 +3,10 @@ class Api::TodoController < ApplicationController
     @todos = Todo.all
     render "index.json.jbuilder"
   end
-#   def show
-#     @journal = Journal.find_by(id: params[:id])
-#     render "show.json.jbuilder"
-#   end
+  def show
+    @todo = Todo.find_by(id: params[:id])
+    render "show.json.jbuilder"
+  end
 #   def create
 #     journal = Journal.new(
 #       entry_type: params[:entry_type],
