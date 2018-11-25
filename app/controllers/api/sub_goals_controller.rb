@@ -1,8 +1,8 @@
 class Api::SubGoalsController < ApplicationController
-  # def index
-  #   @sub_goals = SubGoal.all
-  #   render "index.json.jbuilder"
-  # end
+  def index
+    @sub_goals = SubGoal.all
+    render "index.json.jbuilder"
+  end
   def show
     @sub_goal = SubGoal.find_by(id: params[:id])
     render "show.json.jbuilder"

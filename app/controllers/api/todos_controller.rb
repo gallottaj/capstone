@@ -1,4 +1,4 @@
-class Api::TodoController < ApplicationController
+class Api::TodosController < ApplicationController
   def index
     @todos = Todo.all
     render "index.json.jbuilder"

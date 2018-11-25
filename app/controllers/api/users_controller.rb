@@ -1,9 +1,9 @@
 class Api::UsersController < ApplicationController
-  def index
-    @users = User.all
-    p current_user
-    render "index.json.jbuilder"
-  end
+  # def index
+  #   @users = User.all
+  #   p current_user
+  #   render "index.json.jbuilder"
+  # end
   def show
     @user = User.find_by(id: params[:id])
     render "show.json.jbuilder"
@@ -36,6 +36,6 @@ class Api::UsersController < ApplicationController
   def destroy
     @user = User.find_by(id: params[:id])
     @user.destroy
-    render json: {message: "You just deleted the item"}
+    render json: {message: "You just deleted the user"}
   end
 end
