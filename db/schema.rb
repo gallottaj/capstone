@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_25_205437) do
+ActiveRecord::Schema.define(version: 2018_11_25_210226) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,16 @@ ActiveRecord::Schema.define(version: 2018_11_25_205437) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "journal_id"
+  end
+
+  create_table "track_habits", force: :cascade do |t|
+    t.string "habit_name"
+    t.string "habit_repeat_frequency"
+    t.string "habit_completion_status"
+    t.string "habit_time"
+    t.string "journal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

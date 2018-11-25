@@ -1,4 +1,4 @@
 class Goal < ApplicationRecord
-  belongs_to :goal
+  belongs_to :journal
   has_many :sub_goals
 end

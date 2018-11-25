@@ -1,0 +1,2 @@
+class TrackHabit < ApplicationRecord
+end
