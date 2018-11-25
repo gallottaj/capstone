@@ -10,8 +10,9 @@ class Api::JournalsController < ApplicationController
   def create
     journal = Journal.new(
       entry_type: params[:entry_type],
-      text: params[:text],
-      sub_goal_id: params[:sub_goal_id],
+      entry_body: params[:entry_body],
+      entry_title: params[:entry_title],
+      user_id: params[:user_id],
     )
     if journal.save
       render json: {message: 'journal created successfully'}, status: :created
@@ -23,8 +24,9 @@ class Api::JournalsController < ApplicationController
     @journal = Journal.find_by(id: params[:id])
     @journal.update(
       entry_type: params[:entry_type],
-      text: params[:text],
-      sub_goal_id: params[:sub_goal_id]
+      entry_body: params[:entry_body],
+      entry_title: params[:entry_title],
+      user_id: params[:user_id]
     )
     render "show.json.jbuilder"
   end
