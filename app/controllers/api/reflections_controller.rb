@@ -7,35 +7,35 @@ class Api::ReflectionsController < ApplicationController
     @reflection = Reflection.find_by(id: params[:id])
     render "show.json.jbuilder"
   end
-#   def create
-#     track_habit = TrackHabit.new(
-#       habit_name: params[:habit_name],
-#       habit_repeat_frequency: params[:habit_repeat_frequency],
-#       habit_completion_status: params[:habit_completion_status],
-#       habit_time: params[:habit_time],
-#       journal_id: params[:journal_id],
-#     )
-#     if track_habit.save
-#       render json: {message: 'habit created successfully'}, status: :created
-#     else
-#       render json: {errors: track_habit.errors.full_messages}, status: :bad_request
-#     end
-#   end
-#   def update
-#     @track_habit = TrackHabit.find_by(id: params[:id])
-#     @track_habit.update(
-#       habit_name: params[:habit_name],
-#       habit_repeat_frequency: params[:habit_repeat_frequency],
-#       habit_completion_status: params[:habit_completion_status],
-#       habit_time: params[:habit_time],
-#       journal_id: params[:journal_id],
-#     )
-#     render "show.json.jbuilder"
-#   end
-#   def destroy
-#     @track_habit = TrackHabit.find_by(id: params[:id])
-#     @track_habit.destroy
-#     render json: {message: "You deleted this habit"}
-#   end
-# end
+  def create
+    reflection = Reflection.new(
+      reflection_type: params[:reflection_type],
+      reflection_title: params[:reflection_title],
+      reflection_body: params[:reflection_body],
+      reflection_entry_date: params[:reflection_entry_date],
+      journal_id: params[:journal_id],
+    )
+    if reflection.save
+      render json: {message: 'reflection created successfully'}, status: :created
+    else
+      render json: {errors: reflection.errors.full_messages}, status: :bad_request
+    end
+  end
+  def update
+    @reflection = Reflection.find_by(id: params[:id])
+    @reflection.update(
+      reflection_type: params[:reflection_type],
+      reflection_title: params[:reflection_title],
+      reflection_body: params[:reflection_body],
+      reflection_entry_date: params[:reflection_entry_date],
+      journal_id: params[:journal_id],
+    )
+    render "show.json.jbuilder"
+  end
+  def destroy
+    @reflection = Reflection.find_by(id: params[:id])
+    @reflection.destroy
+    render json: {message: "You deleted this reflection entry"}
+  end
 end
+
