@@ -7,30 +7,34 @@ class Api::TodosController < ApplicationController
     @todo = Todo.find_by(id: params[:id])
     render "show.json.jbuilder"
   end
-#   def create
-#     journal = Journal.new(
-#       entry_type: params[:entry_type],
-#       text: params[:text],
-#       sub_goal_id: params[:sub_goal_id],
-#     )
-#     if journal.save
-#       render json: {message: 'journal created successfully'}, status: :created
-#     else
-#       render json: {errors: journal.errors.full_messages}, status: :bad_request
-#     end
-#   end
-#   def update
-#     @journal = Journal.find_by(id: params[:id])
-#     @journal.update(
-#       entry_type: params[:entry_type],
-#       text: params[:text],
-#       sub_goal_id: params[:sub_goal_id]
-#     )
-#     render "show.json.jbuilder"
-#   end
-#   def destroy
-#     @journal = Journal.find_by(id: params[:id])
-#     @journal.destroy
-#     render json: {message: "You deleted this journal"}
-#   end
+  def create
+    todo = Todo.new(
+      task_name: params[:task_name],
+      task_description: params[:task_description],
+      # sub_goal_id: params[:sub_goal_id],
+      task_checkbox_status: params[:task_checkbox_status],
+      journal_id: params[:journal_id],
+    )
+    if todo.save
+      render json: {message: 'todo created successfully'}, status: :created
+    else
+      render json: {errors: todo.errors.full_messages}, status: :bad_request
+    end
+  end
+  def update
+    @todo = Todo.find_by(id: params[:id])
+    @todo.update(
+      task_name: params[:task_name],
+      task_description: params[:task_description],
+      # sub_goal_id: params[:sub_goal_id],
+      task_checkbox_status: params[:task_checkbox_status],
+      journal_id: params[:journal_id],
+    )
+    render "show.json.jbuilder"
+  end
+  def destroy
+    @todo = Todo.find_by(id: params[:id])
+    @todo.destroy
+    render json: {message: "You deleted this todo"}
+  end
 end
