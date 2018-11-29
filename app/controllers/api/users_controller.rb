@@ -1,4 +1,5 @@
 class Api::UsersController < ApplicationController
+  # a user doesn't need to see all users
   # def index
   #   @users = User.all
   #   p current_user

@@ -17,8 +17,11 @@
 # sub_goal1 = SubGoal.new(sg_name: "perfect attendance", sg_due_date: "12/31/18", sg_status: "started")
 # sub_goal1.save!
 
-Todo.create(task_name: "laundry", task_description: "fold towels", task_checkbox_status: "unchecked")
-Todo.create(task_name: "schedule appt", task_description: "call the number", task_checkbox_status: "checked")
+# Todo.create(task_name: "laundry", task_description: "fold towels", task_checkbox_status: "unchecked")
+# Todo.create(task_name: "schedule appt", task_description: "call the number", task_checkbox_status: "checked")
+
+# TrackHabit.create(habit_name: "bedtime", habit_repeat_frequency: "daily", habit_completion_status: "not completed", habit_time: "10:00 pm", journal_id: "1")
+# TrackHabit.create(habit_name: "lunch", habit_repeat_frequency: "daily", habit_completion_status: "not completed", habit_time: "12:00 pm", journal_id: "1")
 
 
 
