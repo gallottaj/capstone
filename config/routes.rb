@@ -42,6 +42,12 @@ Rails.application.routes.draw do
     post '/track_habits' => 'track_habits#create'
     patch '/track_habits/:id' => 'track_habits#update'
     delete '/track_habits/:id' => 'track_habits#destroy'
+  # reflections
+    get '/reflections' => 'reflections#index' 
+    get '/reflections/:id' => 'reflections#show'
+    post '/reflections' => 'reflections#create'
+    patch '/reflections/:id' => 'reflections#update'
+    delete '/reflections/:id' => 'reflections#destroy'
   end
 end
 

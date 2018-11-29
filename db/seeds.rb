@@ -24,5 +24,12 @@
 # TrackHabit.create(habit_name: "lunch", habit_repeat_frequency: "daily", habit_completion_status: "not completed", habit_time: "12:00 pm", journal_id: "1")
 
 
+# Reflection.create(reflection_type: "status", reflection_title: "my progress as of today", reflection_body: "had a few setbacks", reflection_entry_date: "11/29/18", journal_id: "1")
+
+# Reflection.create(reflection_type: "status", reflection_title: "made a mistake", reflection_body: "I can learn from this mistake because", reflection_entry_date: "11/29/18", journal_id: "1")
+
+
+
+
 
 
