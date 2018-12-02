@@ -1,10 +1,9 @@
 class Api::UsersController < ApplicationController
-  # a user doesn't need to see all users
-  # def index
-  #   @users = User.all
-  #   p current_user
-  #   render "index.json.jbuilder"
-  # end
+  def index
+    @users = User.all
+    p current_user
+    render "index.json.jbuilder"
+  end
   def show
     @user = User.find_by(id: params[:id])
     render "show.json.jbuilder"

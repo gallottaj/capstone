@@ -11,7 +11,6 @@ class Api::TodosController < ApplicationController
     todo = Todo.new(
       task_name: params[:task_name],
       task_description: params[:task_description],
-      # sub_goal_id: params[:sub_goal_id],
       task_checkbox_status: params[:task_checkbox_status],
       journal_id: params[:journal_id],
     )
@@ -26,7 +25,6 @@ class Api::TodosController < ApplicationController
     @todo.update(
       task_name: params[:task_name],
       task_description: params[:task_description],
-      # sub_goal_id: params[:sub_goal_id],
       task_checkbox_status: params[:task_checkbox_status],
       journal_id: params[:journal_id],
     )
