@@ -4,7 +4,7 @@ class Api::JournalsController < ApplicationController
     render "index.json.jbuilder"
   end
   def show
-    @journal = Journal.find_by(id: params[:id])
+    @journal = Journal.find_by_id(params[:id])    
     render "show.json.jbuilder"
   end
   def create

@@ -1,4 +1,5 @@
 json.array! @journals do |journal|
+  json.id journal.id
   json.entry_type journal.entry_type
   json.entry_body journal.entry_body
   json.created_at journal.created_at

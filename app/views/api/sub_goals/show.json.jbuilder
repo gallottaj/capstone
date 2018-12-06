@@ -1,3 +1,4 @@
+json.id @sub_goal.id
 json.sub_goal_name @sub_goal.sub_goal_name
 json.sub_goal_due_date @sub_goal.sub_goal_due_date
 json.sub_goal_status @sub_goal.sub_goal_status

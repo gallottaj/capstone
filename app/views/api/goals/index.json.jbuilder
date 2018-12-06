@@ -1,4 +1,5 @@
 json.array! @goals do |goal|
+  json.id goal.id
   json.goal_name goal.goal_name
   json.due_date goal.due_date
   json.status goal.status
