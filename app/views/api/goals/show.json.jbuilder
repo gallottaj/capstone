@@ -6,3 +6,4 @@
   json.created_at @goal.created_at
   json.updated_at @goal.updated_at
   json.sub_goals @goal.sub_goals
+
