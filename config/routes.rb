@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   # STEP 1: A ROUTE triggers a controller action
   # verb "/urls" => "namespace/controllers#action"
+    
+  # nasa_apod
+  get '/nasa_apod' => 'nasa_apod#show' 
 
   namespace :api do
   # users
