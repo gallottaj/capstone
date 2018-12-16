@@ -5,6 +5,8 @@ ruby '2.5.1'
 
 gem "http"
 
+gem 'figaro'
+
 gem 'unirest'
 
 gem 'rack-cors', require: 'rack/cors'
